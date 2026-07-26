@@ -166,10 +166,3 @@ void loop() {
 3. Select your ESP8266 Board (e.g., `NodeMCU 1.0 (ESP-12E Module)`) under `Tools` -> `Board`.
 4. Connect the board via USB, select the correct Port, and click **Upload**.
 5. Open the Serial Monitor (Baud Rate: **115200**) to see connection updates and real-time gas telemetry printouts.
-
----
-
-## 🔮 Future Enhancements
-- **Intelligent Edge AI**: Interfacing artificial intelligence algorithms to classify plume behavior or predict future leakage cycles based on transient heat maps.
-- **Battery-Powered Standby**: Implementing ESP8266 Deep Sleep modes to run the device for months on secondary batteries.
-- **Multi-Sensor Array**: Integrating carbon monoxide (MQ-7) and temperature sensors (DHT11/22) for complete environmental hazard detection.
