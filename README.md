@@ -40,15 +40,17 @@ graph TD
 | Component | Description | Role |
 | :--- | :--- | :--- |
 | **NodeMCU (ESP8266)** | WiFi-enabled microcontroller development board | Core processing unit and cloud network gateway |
-| **MQ-4 Gas Sensor** | High-sensitivity methane ($CH_4$) gas sensor | Collects analog gas concentration levels |
-| **Jumper Wires & Breadboard** | Breadboarding wires | Establishes electrical connections |
+| **Arduino Uno** | Microcontroller development board | Used as a stable 5V power supply source for the sensor's heater |
+| **MQ-4 Gas Sensor** | High-sensitivity methane ($CH_4$) gas sensor | Detects analog gas concentration levels (requires 5V supply) |
+| **Jumper Wires & Breadboard** | Breadboarding wires | Establishes electrical connections and common ground |
 
 ### Schematic Interfacing Table
-| ESP8266 NodeMCU Pin | MQ-4 Sensor Pin | Description |
-| :---: | :---: | :--- |
-| **A0** | Analog Output (`A0`) | Passes analog gas voltage levels to ADC |
-| **3V3 / VIN** | VCC (`+5V`) | Powers the sensor |
-| **GND** | GND | Common reference ground |
+| Component Pin 1 | Component Pin 2 | Description |
+| :--- | :--- | :--- |
+| **MQ-4 Sensor A0** | **NodeMCU A0** | Sends analog gas voltage levels to NodeMCU ADC |
+| **MQ-4 Sensor VCC** | **Arduino Uno 5V** | Powers the MQ-4 internal heater (requires 5V) |
+| **MQ-4 Sensor GND** | **Shared GND Rail** | Ground connection |
+| **Arduino Uno GND** | **NodeMCU GND** | Connects grounds to establish a common reference |
 
 ---
 
@@ -149,9 +151,11 @@ void loop() {
 
 ### 1. Hardware Assembly
 1. Mount the **NodeMCU (ESP8266)** on the breadboard.
-2. Connect the **VCC** and **GND** pins of the **MQ-4 Methane Sensor** to the NodeMCU's power pins (3V3/VIN and GND).
-3. Connect the sensor's **A0 pin** to the NodeMCU's **A0 pin**.
-4. Power the setup via a USB data cable connected to a computer or power adapter.
+2. Connect the **VCC** of the **MQ-4 Methane Sensor** to the **5V pin** of the **Arduino Uno** (this provides the necessary 5V to drive the sensor's internal heater).
+3. Connect the **GND** pin of the **MQ-4 Methane Sensor** to a shared ground rail on the breadboard.
+4. Connect the **Arduino Uno GND** to the **NodeMCU GND** to establish a common reference ground.
+5. Connect the sensor's **A0 pin** to the NodeMCU's **A0 pin**.
+6. Power both the NodeMCU and Arduino Uno using USB cables connected to a computer or power adapter.
 
 ### 2. ThingSpeak Configuration
 1. Register/Login at [ThingSpeak](https://thingspeak.com/).
