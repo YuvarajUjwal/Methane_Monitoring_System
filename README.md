@@ -3,7 +3,6 @@
 [![Arduino](https://img.shields.io/badge/Platform-Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)](https://www.arduino.cc/)
 [![ESP8266](https://img.shields.io/badge/Hardware-ESP8266-red?style=flat-square)](https://www.espressif.com/en/products/socs/esp8266)
 [![ThingSpeak](https://img.shields.io/badge/Cloud-ThingSpeak-blue?style=flat-square)](https://thingspeak.com/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
 An Internet of Things (IoT) based Methane Gas ($CH_4$) Monitoring System designed to detect gas concentration in residential, industrial, and agricultural settings. The physical prototype continuously measures methane concentration using an analog gas sensor and publishes real-time telemetry data to the **ThingSpeak** cloud platform for remote monitoring.
 
@@ -174,11 +173,3 @@ void loop() {
 - **Intelligent Edge AI**: Interfacing artificial intelligence algorithms to classify plume behavior or predict future leakage cycles based on transient heat maps.
 - **Battery-Powered Standby**: Implementing ESP8266 Deep Sleep modes to run the device for months on secondary batteries.
 - **Multi-Sensor Array**: Integrating carbon monoxide (MQ-7) and temperature sensors (DHT11/22) for complete environmental hazard detection.
-
----
-
-## 📄 License
-This project is open-source and licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
----
-*Developed as a B.Tech project in Electronics and Communication Engineering under guidance from Pentagon Rugged Systems & K L Deemed to be University.*
