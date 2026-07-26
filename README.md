@@ -26,10 +26,10 @@ graph TD
     F -->|HTTP POST API| G[ThingSpeak Cloud Server]
     G -->|Real-Time Analytics| H[Web Dashboard Charts]
 
-    style A fill:#f2f,stroke:#333,stroke-width:2px
-    style B fill:#bfb,stroke:#333,stroke-width:2px
-    style G fill:#dbf,stroke:#333,stroke-width:2px
-    style H fill:#fbf,stroke:#333,stroke-width:2px
+    style A fill:#0284c7,stroke:#0369a1,stroke-width:2px,color:#fff
+    style B fill:#16a34a,stroke:#15803d,stroke-width:2px,color:#fff
+    style G fill:#4f46e5,stroke:#4338ca,stroke-width:2px,color:#fff
+    style H fill:#db2777,stroke:#be185d,stroke-width:2px,color:#fff
 ```
 
 ---
